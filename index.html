@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Todays Forest Fire Risk Level</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+        #container {
+          width: 270px;
+          height: 90px;
+          border: 2px solid #000;
+          background-color:  #2f2f2f;
+          overflow: hidden;
+          border-radius: 3px;
+          color: #fefdfb;
+        }
+
+        #lastPrice{
+            font-size: 30px;
+            font-family: sans-serif;
+            font-weight: bold;
+            padding-left: 5px;
+            padding-top: 5px;
+        }
+
+        #timeDate{
+          color: #999;
+          font-size: 9px;
+        }
+
+
+        </style>
+
+        <script type="text/javascript" src="jquery.js"></script>
+
+        <script>
+
+              //url: "www.michaelmilanodesign.com/fire_risk.txt",
+              const Http = new XMLHttpRequest();
+              const url='www.michaelmilanodesign.com/fire_risk.txt';
+              Http.open("GET", url);
+              Http.send();
+
+              Http.onreadystatechange = (e) => {
+              console.log(Http.responseText)
+}
+
+</script>
+
+
+
+        <script src="firerisk.js"></script>
+
+    </head>
+    <body>
+
+
+
+
+
+        <div id=container>
+          <table width="100%">
+            <tr>
+              <td rowspan="3" width="60%" id="lastPrice">Forest Fire Risk</td>
+              <td align="right"> </td>
+            </tr>
+          <tr>
+              <td padding:"30px"; > <!--p id="myCanvas" style= "color: c80a64;"> test </p-->
+                <canvas id="myCanvas" width="30" height="30" style="border:3px solid #d3d3d3;">
+                    Your browser does not support the HTML5 canvas tag.</canvas></td>
+          </tr>
+
+        </table>
+        </div>
+    </body>
+</html>
