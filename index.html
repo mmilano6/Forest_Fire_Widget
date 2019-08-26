@@ -15,19 +15,20 @@ and open the template in the editor.
         #container {
           width: 270px;
           height: 90px;
-          border: 2px solid #000;
-          background-color:  #2f2f2f;
+          border: 6px solid #609553;
+          background-color: #FFFFFF;
           overflow: hidden;
-          border-radius: 3px;
-          color: #fefdfb;
+          border-radius: 20px 3px 3px 3px;
+          color: #96B0A6;
         }
 
         #lastPrice{
             font-size: 30px;
             font-family: sans-serif;
-            font-weight: bold;
-            padding-left: 5px;
-            padding-top: 5px;
+            color: #4C2609;
+            font-weight: 400;
+            padding-left: 20px;
+            padding-top: 15px;
         }
 
         #timeDate{
@@ -35,35 +36,17 @@ and open the template in the editor.
           font-size: 9px;
         }
 
+        #fireWarning{
+          padding-left: 35px;
+          padding-top: 13px;
+          }
 
         </style>
-
-        <script type="text/javascript" src="jquery.js"></script>
-
-        <script>
-
-              //url: "www.michaelmilanodesign.com/fire_risk.txt",
-              const Http = new XMLHttpRequest();
-              const url='www.michaelmilanodesign.com/fire_risk.txt';
-              Http.open("GET", url);
-              Http.send();
-
-              Http.onreadystatechange = (e) => {
-              console.log(Http.responseText)
-}
-
-</script>
-
-
 
         <script src="firerisk.js"></script>
 
     </head>
     <body>
-
-
-
-
 
         <div id=container>
           <table width="100%">
@@ -72,8 +55,9 @@ and open the template in the editor.
               <td align="right"> </td>
             </tr>
           <tr>
-              <td padding:"30px"; > <!--p id="myCanvas" style= "color: c80a64;"> test </p-->
-                <canvas id="myCanvas" width="30" height="30" style="border:3px solid #d3d3d3;">
+
+              <td id="fireWarning"> 
+                <canvas id="myCanvas" width="60" height="60" style="border:#123C2B solid:#d3d3d3;">
                     Your browser does not support the HTML5 canvas tag.</canvas></td>
           </tr>
 
