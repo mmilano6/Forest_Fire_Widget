@@ -6,7 +6,7 @@
 * parse a text file with a nine digit color code. Then it would update the LED.
 * The script had to run for an unknown length, and most likely it was several hours.
 * It was part of a bigger hi-fi prototype of an IoT system, which had to work after
-* being plugged in, without any support team.
+* being plugged in, without any support team. This script was written in two days.
 */
 
 //initial risk color and global variables
